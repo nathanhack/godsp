@@ -282,14 +282,7 @@ func NormaliseAll(xs [][]float64) [][]float64 {
 // Pow2 returns 2^x.
 // The function panics if x < 0
 func Pow2(x int) int {
-	if x < 0 {
-		panic(fmt.Sprintf("X = %d", x))
-	}
-	pw := 1
-	for i := 1; i <= x; i++ {
-		pw *= 2
-	}
-	return pw
+	return 1<<x
 }
 
 // Range returns an interger range 0:1:n-1
